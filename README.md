@@ -1,11 +1,12 @@
 ## HW1 - Network Config
+
 ### Key Tasks
 - System Setup
 	- Installed Debian on a VM with custom network interfaces
-	- Configured sudo privileges and enabled SSH remote access
+	- Configured `sudo` privileges and enabled SSH remote access
 - VPN & Networking
 	- Installed and configured WireGuard with auto-boot
-	- Set up static IPs and DNS via /etc/network/interfaces
+	- Set up static IPs and DNS via `/etc/network/interfaces`
 	- Enabled IPv4 forwarding for packet routing
 - Services
 	- Installed and configured a DHCP server to manage dynamic IP assignment
@@ -15,17 +16,47 @@
     	- Dropped SSH access from VPN to router
     	- Allowed controlled SSH/HTTP/HTTPS traffic
     	- Blocked inbound connections from Internet/VPN to private LAN
-  	- Persisted rules with netfilter-persistent
+  	- Persisted rules with `netfilter-persistent`
+
 ### Skills Demonstrated
 - Linux system administration (Debian 12)
 - VPN setup with WireGuard
 - Network routing, NAT, and firewall management using iptables
 - DHCP configuration for LAN environments
 - Practical understanding of server/network security
+
 ### Notes: 
 https://sun-ski-6a4.notion.site/HW1-Network-Config-1ab768cf5f3580ad96d7efdc04dce47d?source=copy_link
 
+
 ## HW2 - DNS
+
+### Key Tasks
+- DNS Server Setup
+    - Installed and configured BIND9
+    - Created custom forward and reverse zones (`36.nasa` and `36.168.192.in-addr.arpa`)
+    - Verified syntax and functionality with `named-checkconf`, `named-checkzone`, and `dig`
+- Zone Files
+    - Defined authoritative records for hosts (`A`, `NS`, `PTR`)
+    - Configured reverse lookup zones for IP-to-domain resolution
+- Resolver Configuration
+    - Enabled recursion with global and zone-specific forwarders
+    - Integrated public DNS forwarders (e.g., Cloudflare `1.1.1.1`)
+- DNSSEC
+    - Generated ZSK/KSK key pairs using `dnssec-keygen`
+    - Signed forward and reverse zones with `dnssec-signzone`
+    - Configured chain of trust and verified with `dig +dnssec`
+- Security & Extensions
+    - Explored DNS over TLS (DoT) and DNS over HTTPS (DoH) support in BIND9
+    - Managed permissions and service restarts for secure operation
+
+### Skills Demonstrated
+- BIND9 DNS server administration
+- Forward/reverse zone configuration
+- DNSSEC signing and validation (ZSK/KSK, DS records, chain of trust)
+- Resolver setup with recursion and forwarders
+- Debugging with dig and journalctl
+- Understanding of secure DNS protocols (DoT/DoH)
 
 ### Notes:
 https://sun-ski-6a4.notion.site/HW2-DNS-1be768cf5f358052aca1c97a2c239e78?source=copy_link
