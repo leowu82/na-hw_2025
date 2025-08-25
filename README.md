@@ -1,12 +1,4 @@
-# Computer Network Administration Homeworks
-
-## Quick Navigation
-- HW1 — Network Config: `hw1/README.md`
-- HW2 — DNS: `hw2/README.md`
-- HW3 — Mail Server: `hw3/README.md`
-- HW4 — LDAP: `hw4/README.md`
-
-## Overview
+# Overview
 
 - HW1 — Network Config
   - Goal: Build a Debian VM configured as a router/server with WireGuard VPN, DHCP, static IPs, and iptables NAT/forwarding rules.
