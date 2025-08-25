@@ -1,69 +1,29 @@
-## HW1 - Network Config
+# Computer Network Administration Homeworks
 
-### Key Tasks
-- System Setup
-	- Installed Debian on a VM with custom network interfaces
-	- Configured `sudo` privileges and enabled SSH remote access
-- VPN & Networking
-	- Installed and configured WireGuard with auto-boot
-	- Set up static IPs and DNS via `/etc/network/interfaces`
-	- Enabled IPv4 forwarding for packet routing
-- Services
-	- Installed and configured a DHCP server to manage dynamic IP assignment
-- Firewall & Security
-  	- Configured iptables rules for NAT, forwarding, and access control
-  	- Implemented custom firewall policies:
-    	- Dropped SSH access from VPN to router
-    	- Allowed controlled SSH/HTTP/HTTPS traffic
-    	- Blocked inbound connections from Internet/VPN to private LAN
-  	- Persisted rules with `netfilter-persistent`
+## Quick Navigation
+- HW1 — Network Config: `hw1/README.md`
+- HW2 — DNS: `hw2/README.md`
+- HW3 — Mail Server: `hw3/README.md`
+- HW4 — LDAP: `hw4/README.md`
 
-### Skills Demonstrated
-- Linux system administration (Debian 12)
-- VPN setup with WireGuard
-- Network routing, NAT, and firewall management using iptables
-- DHCP configuration for LAN environments
-- Practical understanding of server/network security
+## Overview
 
-### Notes: 
-https://sun-ski-6a4.notion.site/HW1-Network-Config-1ab768cf5f3580ad96d7efdc04dce47d?source=copy_link
+- HW1 — Network Config
+  - Goal: Build a Debian VM configured as a router/server with WireGuard VPN, DHCP, static IPs, and iptables NAT/forwarding rules.
+  - Skills: Linux sysadmin, WireGuard, DHCP, iptables, routing and NAT.
+  - More: `hw1/README.md` (Notes: Notion link included)
 
+- HW2 — DNS
+  - Goal: Deploy BIND9 with forward/reverse zones, resolvers, and DNSSEC signing (ZSK/KSK).
+  - Skills: BIND9, zone files, DNSSEC, dig/debugging, DoT/DoH exploration.
+  - More: `hw2/README.md` (Notes: Notion link included)
 
-## HW2 - DNS
+- HW3 — Mail Server
+  - Goal: Run a secure mail server (Postfix + Dovecot) with TLS, SASL, MX/DNS integration, SPF/DKIM/DMARC and anti-spam measures.
+  - Skills: Postfix, Dovecot, TLS, mail auth (SPF/DKIM/DMARC), greylisting.
+  - More: `hw3/README.md` (Notes: Notion link included)
 
-### Key Tasks
-- DNS Server Setup
-    - Installed and configured BIND9
-    - Created custom forward and reverse zones (`36.nasa` and `36.168.192.in-addr.arpa`)
-    - Verified syntax and functionality with `named-checkconf`, `named-checkzone`, and `dig`
-- Zone Files
-    - Defined authoritative records for hosts (`A`, `NS`, `PTR`)
-    - Configured reverse lookup zones for IP-to-domain resolution
-- Resolver Configuration
-    - Enabled recursion with global and zone-specific forwarders
-    - Integrated public DNS forwarders (e.g., Cloudflare `1.1.1.1`)
-- DNSSEC
-    - Generated ZSK/KSK key pairs using `dnssec-keygen`
-    - Signed forward and reverse zones with `dnssec-signzone`
-    - Configured chain of trust and verified with `dig +dnssec`
-- Security & Extensions
-    - Explored DNS over TLS (DoT) and DNS over HTTPS (DoH) support in BIND9
-    - Managed permissions and service restarts for secure operation
-
-### Skills Demonstrated
-- BIND9 DNS server administration
-- Forward/reverse zone configuration
-- DNSSEC signing and validation (ZSK/KSK, DS records, chain of trust)
-- Resolver setup with recursion and forwarders
-- Debugging with dig and journalctl
-- Understanding of secure DNS protocols (DoT/DoH)
-
-### Notes:
-https://sun-ski-6a4.notion.site/HW2-DNS-1be768cf5f358052aca1c97a2c239e78?source=copy_link
-
-## HW3 - Mail Server
-https://sun-ski-6a4.notion.site/HW3-Mail-Server-1d9768cf5f3580ae81ddfa1758560b85?source=copy_link
-
-## HW4 - LDAP
-https://sun-ski-6a4.notion.site/HW4-LDAP-1ed768cf5f358032aadfdd5f304af0d0?source=copy_link
-
+- HW4 — LDAP
+  - Goal: Provide centralized authentication/authorization with OpenLDAP, TLS-only LDAPS, PAM/NSS client integration, and custom schema/ACLs.
+  - Skills: OpenLDAP, PAM/NSS integration, LDIF provisioning, ACLs, sudo via LDAP.
+  - More: `hw4/README.md` (Notes: Notion link included)
